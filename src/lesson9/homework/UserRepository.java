@@ -20,19 +20,16 @@ public class UserRepository {
     }
 
     public User update(User user) {
-        if (user != null) {
-            if(findById(user.getId()) != null) {
-                for (int i = 0; i < length; i++) {
-                    if(users[i] != null) {
-                        if (users[i].equals(user)) {
-                            users[i] = user;
-                            break;
-                        }
+        if (user != null && findById(user.getId()) != null) {
+            for (int i = 0; i < length; i++) {
+                if (users[i] != null) {
+                    if (users[i].equals(user)) {
+                        users[i] = user;
+                        break;
                     }
                 }
-                return user;
             }
-            return null;
+            return user;
         }
         else
             return null;
