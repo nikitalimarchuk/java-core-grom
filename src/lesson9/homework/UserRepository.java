@@ -8,10 +8,12 @@ public class UserRepository {
     public User save(User user) {
         if (counter == length) {
             return null;
-        } else {
+        }
+        else {
             if (findById(user.getId()) != null) {
                 return null;
-            } else {
+            }
+            else {
                 users[findNullCells()] = user;
                 counter++;
                 return user;
@@ -20,7 +22,7 @@ public class UserRepository {
     }
 
     public User update(User user) {
-        if (user != null && findById(user.getId()) != null) {
+        if (user != null && (findById(user.getId()) != null)) {
             for (int i = 0; i < length; i++) {
                 if (users[i] != null) {
                     if (users[i].equals(user)) {
