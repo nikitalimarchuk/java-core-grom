@@ -1,0 +1,14 @@
+package lesson8.accounts;
+
+/**
+ * Created by Admin on 27.05.2017.
+ */
+public class Demo {
+    public static void main(String[] args) {
+        SavingAccount savingAccount = new SavingAccount("SomeBank", "Denis", 1000, 50);
+        savingAccount.depositMoney(100);
+        System.out.println(savingAccount.moneyAmount);
+        savingAccount.changeOwnerName("Oleg");
+        System.out.println(savingAccount.ownerName);
+    }
+}
