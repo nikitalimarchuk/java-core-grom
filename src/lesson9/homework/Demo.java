@@ -31,6 +31,8 @@ public class Demo {
         //System.out.println(userRepository.save(user11));
         //System.out.println(userRepository.update(user10));
         System.out.println(userRepository.update(null));
+        System.out.println(userRepository.update(user10));
+        System.out.println(userRepository.update(user9));
 
     }
 }

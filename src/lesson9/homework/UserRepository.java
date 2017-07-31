@@ -21,7 +21,7 @@ public class UserRepository {
 
     public User update(User user) {
         if (user != null) {
-            if(findById(user.hashCode()) != null) {
+            if(findById(user.getId()) != null) {
                 for (int i = 0; i < length; i++) {
                     if(users[i] != null) {
                         if (users[i].equals(user)) {
@@ -30,9 +30,11 @@ public class UserRepository {
                         }
                     }
                 }
+                return user;
             }
-            return user;
-        } else
+            return null;
+        }
+        else
             return null;
     }
 
@@ -49,7 +51,7 @@ public class UserRepository {
     private User findById(long id) {
         for (User user : users) {
             if (user != null) {
-                if (user.hashCode() == id) {
+                if (user.getId() == id) {
                     return user;
                 }
             }
