@@ -26,7 +26,7 @@ public class UserRepository {
             if (findById(user.getId()) != null) {
                 for (int i = 0; i < length; i++) {
                     if (users[i] != null) {
-                        if (users[i].getId() == user.getId()) {
+                        if (users[i].hashCode() == user.hashCode()) {
                             users[i] = user;
                             break;
                         }
