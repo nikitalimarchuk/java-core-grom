@@ -26,7 +26,7 @@ public class UserRepository {
             if (findById(user.getId()) != null) {
                 for (int i = 0; i < length; i++) {
                     if (users[i] != null) {
-                        if (users[i].equals(user)) {
+                        if (users[i].getId() == user.getId()) {
                             users[i] = user;
                             break;
                         }
